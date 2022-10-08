@@ -5,8 +5,14 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body>
-    <div id="app">
-      {{firstname + ' ' + lastname}}
+    <div id="app" v-cloak>
+      <p>{{fullName()}}</p>
+      <p><a v-bind:href="url">Google</a></p>
+      <hr>
+      <label>First Name</label>
+      <input type="text" v-model="firstname">
+      <label >Last Name</label>
+      <input type="text" v-model="lastname">
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
