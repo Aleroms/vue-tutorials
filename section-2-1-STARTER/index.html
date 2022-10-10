@@ -6,13 +6,23 @@
   </head>
   <body>
     <div id="app" v-cloak>
-      <p>{{fullName()}}</p>
+      <p>{{fullName}}</p>
+      <p>{{typeof age}}</p>
       <p><a v-bind:href="url">Google</a></p>
+      <p v-html="raw_url"></p>
+
       <hr>
       <label>First Name</label>
-      <input type="text" v-model="firstname">
+      <input type="text" v-model.lazy.trim="firstname">
+      <label >Middle Name</label>
+      <input type="text" :value="middleName" v-on:keyup.enter="updateMiddleName">
       <label >Last Name</label>
-      <input type="text" v-model="lastname">
+      <input type="text" :value="lastname" @input.prevent="updateLastName('hello',$event)">
+
+      <label>Age</label>
+      <input type="number" v-model.number="age">
+      <button type="button" v-on:click="increment()">Increment</button>
+      <button type="button" v-on:click="age--">Decrement</button>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
