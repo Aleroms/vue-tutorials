@@ -1,47 +1,32 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      flag: false,
+    };
+  },
+};
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <button type="button" @click="flag = !flag">Toggle</button>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <!-- <transition name="fade" mode="out-in">
+    <h2 v-if="flag" key="main">this is some text</h2>
+    <h2 v-else key="secondary">not text</h2>
+  </transition> -->
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.fade-enter-from {
+  opacity: 0;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.fade-enter-active {
+  transition: all 0.25s linear;
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.fade-leave-to {
+  transition: all 0.25s linear;
+  opacity: 0;
 }
 </style>
