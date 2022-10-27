@@ -35,60 +35,81 @@ export default {
       totalCorrect: 0,
       questions: [
         {
-          q: "What is 2 + 2?",
+          q: "Wake the f*ck up samurai, we got...",
           answers: [
             {
-              text: "4",
+              text: "to go to church",
+              is_correct: false,
+            },
+            {
+              text: "a city to burn",
               is_correct: true,
             },
             {
-              text: "3",
+              text: "to clean our room",
               is_correct: false,
             },
             {
-              text: "Fish",
-              is_correct: false,
-            },
-            {
-              text: "5",
+              text: "a test at noon",
               is_correct: false,
             },
           ],
         },
         {
-          q: 'How many letters are in the word "Banana"?',
+          q: "Who said, You look like a f*ckable slab of meat?",
           answers: [
             {
-              text: "5",
+              text: "Rouge",
               is_correct: false,
             },
             {
-              text: "7",
+              text: "Johnny Silverhand",
               is_correct: false,
             },
             {
-              text: "6",
+              text: "Adam Smasher",
               is_correct: true,
             },
             {
-              text: "12",
+              text: "V",
               is_correct: false,
             },
           ],
         },
         {
-          q: "Find the missing letter: C_ke",
+          q: "Which is not a sub-district in Wattson?",
           answers: [
             {
-              text: "e",
+              text: "Kabuki",
               is_correct: false,
             },
             {
-              text: "a",
+              text: "Little China",
+              is_correct: false,
+            },
+            {
+              text: "Northside",
+              is_correct: false,
+            },
+            {
+              text: "Arroyo",
+              is_correct: true,
+            },
+          ],
+        },
+        {
+          q: "What did Johnny Silverhand deliver to Arasaka?",
+          answers: [
+            {
+              text: "pizza",
+              is_correct: false,
+            },
+            {
+              text: "nuclear bomb",
               is_correct: true,
             },
             {
-              text: "i",
+              text: "Adam Smasher's favorite t-shirt",
               is_correct: false,
             },
           ],
@@ -98,14 +119,14 @@ export default {
         {
           min: 0,
           max: 2,
-          title: "Try again!",
-          desc: "Do a little more studying and you may succeed!",
+          title: "My name is Davi-",
+          desc: "*slaps* Nobody Asked",
         },
         {
-          min: 3,
-          max: 3,
-          title: "Wow, you're a genius!",
-          desc: "Studying has definitely paid off for you!",
+          min: 4,
+          max: 4,
+          title: "Choom, You're Nova!",
+          desc: "Its time to burn Night City",
         },
       ],
     };
@@ -119,10 +140,9 @@ export default {
     },
     reset() {
       this.totalCorrect = 0;
-      this.questionAnswered = 0;
+      this.questionsAnswered = 0;
+      console.log('busy')
     },
   },
 };
 </script>
-
-<style scoped></style>

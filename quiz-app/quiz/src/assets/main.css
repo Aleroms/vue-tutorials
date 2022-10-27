@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +7,8 @@ body {
   font-family: sans-serif;
   padding-top: 20px;
   background: #e6ecf1;
+  background-image: url("https://whatifgaming.com/wp-content/uploads/2022/05/Street-View-scaled.jpg");
+  background-size: cover;
 }
 
 .ctr {
@@ -107,24 +110,33 @@ body {
 }
 .fade-leave-to {
   opacity: 0;
-} 
+}
 
 .reset-btn {
   background-color: #ff6372;
-    border: 0;
-    font-size: 22px;
-    color: #fff;
-    padding: 10px 25px;
-    margin: 10px auto;
-    display: block;
+  border: 0;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 25px;
+  margin: 10px auto;
+  display: block;
+}
+.reset-btn:hover {
+  cursor: pointer;
 }
 
-.result{ 
+.result {
   width: 100%;
 }
 
-
-.reset-btn:active, .reset-btn:focus, .reset-btn:hover{
+.reset-btn:active,
+.reset-btn:focus,
+.reset-btn:hover {
   border: 0;
   outline: 0;
+}
+@media (max-width: 1000px) {
+  body {
+    background-image: url("https://preview.redd.it/gw3kurleq0t11.jpg?width=766&format=pjpg&auto=webp&s=26ec0220909645e968426fd548c1058e33e5350c");
+  }
 }
