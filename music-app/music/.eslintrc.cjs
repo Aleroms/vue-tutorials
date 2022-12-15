@@ -13,5 +13,14 @@ module.exports = {
   },
   env: {
     node: true,
-  }
+  },
+  rules: {
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
+    "vue/multi-word-component-names": "off",
+  },
 };
