@@ -42,6 +42,7 @@ export default {
 
       this.reg_alert_variant = "bg-green-500";
       this.reg_alert_msg = "success! Your account has been created";
+      window.location.reload();
     },
     AppErrorMessage() {
       this.reg_in_submission = false;
