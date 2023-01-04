@@ -9,7 +9,7 @@
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
-          <li v-if="!this.userStore.userloggedIn">
+          <li v-if="!userStore.userLoggedIn">
             <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal"
               >Login / Register</a
             >
@@ -44,7 +44,7 @@ export default {
       //by using mapstores
       this.modalStore.isOpen = !this.modalStore.isOpen;
       console.log(this.modalStore.isOpen);
-      console.log(this.userStore.userloggedIn);
+      console.log(this.userStore.userLoggedIn);
     },
   },
   computed: {
