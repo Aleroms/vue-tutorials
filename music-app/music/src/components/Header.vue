@@ -31,10 +31,7 @@
               >
             </li>
             <li>
-              <a
-                class="px-2 text-white"
-                href="#"
-                @click.prevent="userStore.signOut"
+              <a class="px-2 text-white" href="#" @click.prevent="signOut"
                 >Logout</a
               >
             </li>
@@ -57,6 +54,18 @@ export default {
       this.modalStore.isOpen = !this.modalStore.isOpen;
       console.log(this.modalStore.isOpen);
       console.log(this.userStore.userLoggedIn);
+    },
+    signOut() {
+      this.userStore.signOut();
+
+      //console.log(this.$route);
+
+
+      //if user logs out while on manage page
+      //they will be redirected
+      if (this.$route.meta.requiresAuth) {
+        this.$router.push({ name: "home" });
+      }
     },
   },
   computed: {
