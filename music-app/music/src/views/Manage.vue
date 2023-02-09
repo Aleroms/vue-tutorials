@@ -3,7 +3,7 @@
   <section class="container mx-auto mt-6">
     <div class="md:grid md:grid-cols-3 md:gap-4">
       <div class="col-span-1">
-        <AppUpload ref="upload" />
+        <AppUpload ref="upload" :addSong="addSong" />
       </div>
       <div class="col-span-2">
         <div
@@ -23,6 +23,8 @@
               :song="song"
               :updateSong="updateSong"
               :index="i"
+              :removeSong="removeSong"
+              :updateUnsavedFlag="updateUnsavedFlag"
             />
           </div>
         </div>
@@ -40,6 +42,7 @@ export default {
   data() {
     return {
       songs: [],
+      unsavedFlag: false,
     };
   },
   components: {
@@ -51,26 +54,38 @@ export default {
       .where("uid", "==", auth.currentUser.uid)
       .get();
 
-    snapshot.forEach((document) => {
-      const song = {
-        ...document.data(),
-        docID: document.id,
-      };
-
-      this.songs.push(song);
-    });
+    snapshot.forEach(this.addSong);
   },
   methods: {
     updateSong(i, values) {
       this.songs[i].modified_name = values.modified_name;
       this.songs[i].genre = values.genre;
     },
+    removeSong(i) {
+      this.songs.splice(i, 1);
+    },
+    addSong(document) {
+      const song = {
+        ...document.data(),
+        docID: document.id,
+      };
+
+      this.songs.push(song);
+    },
+    updateUnsavedFlag(value) {
+      this.unsavedFlag = value;
+    },
   },
-  // beforeRouteLeave(to, from, next) {
-  //   this.$refs.upload.cancelUploads();
-  //   next();
-  //   //reference can be added by adding ref='' in element template
-  // },
+  beforeRouteLeave(to, from, next) {
+    if (!this.unsavedFlag) {
+      next();
+    } else {
+      const leave = confirm(
+        "You have unsaved changes. Are you sure you want to leave?"
+      );
+      next(leave);
+    }
+  },
   //beforeRouteEnter(to, from, next) {
   // const store = useUserStore();
   // //will validate if user is logged in.
