@@ -90,8 +90,9 @@
 
 <script>
 import { songsCollection, auth, commentsCollection } from "@/includes/firebase";
-import { mapState } from "pinia";
+import { mapState, mapActions } from "pinia";
 import useUserStore from "@/stores/user";
+import usePlayerStore from "@/stores/player";
 export default {
   name: "Song",
   computed: {
@@ -136,6 +137,7 @@ export default {
     this.getComments();
   },
   methods: {
+    ...mapActions(usePlayerStore, ["newSong"]),
     async addComment(values, { resetForm }) {
       this.comment_in_submission = true;
       this.comment_show_alert = true;
