@@ -1,0 +1,27 @@
+{
+  "home": {
+    "listen": "¡Escucha buena música!",
+    "description": "Proyecto creado por Santiago Morales. Aprendió a usar las herramientas de Vue y a conectar la base de fuego de Google a través de una API.",
+    "my_songs": "Canciones"
+  },
+  "song": {
+    "comment_count": "Sin comentarios | 1 comentario | {contar} comentarios"
+  },
+  "register": {
+    "accept": "Acepto Music's {0}",
+    "tos": "Términos de servicio"
+  },
+  "manage": {
+    "my_songs": "Mis canciones"
+  },
+  "upload": {
+    "upload": "Subir",
+    "dropFiles": "Deja tus archivos aquí"
+  },
+  "header": {
+    "about": "Acerca de",
+    "loginRegister": "Iniciar sesión / Registrarse",
+    "manage": "Administrar",
+    "logout": "Cerrar sesión"
+  }
+}

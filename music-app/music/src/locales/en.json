@@ -1,0 +1,27 @@
+{
+  "home": {
+    "listen": "Listen to Great Music!",
+    "description": "Project created by Santiago Morales. Learned how to use Vue's tools and connecting Google's firebase through an API",
+    "my_songs": "Songs"
+  },
+  "song": {
+    "comment_count": "No comments | 1 comment | {count} comments"
+  },
+  "register": {
+    "accept": "I accept Music's {0}",
+    "tos": "Terms of Service"
+  },
+  "manage": {
+    "my_songs": "My Songs"
+  },
+  "upload": {
+    "upload": "Upload",
+    "dropFiles": "Drop your files here"
+  },
+  "header": {
+    "about": "About",
+    "loginRegister": "Login / Register",
+    "manage": "Manage",
+    "logout": "Logout"
+  }
+}
