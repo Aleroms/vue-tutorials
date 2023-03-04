@@ -68,6 +68,18 @@ export default {
           return;
         }
 
+        if (!navigator.onLine) {
+          this.uploads.push({
+            task: {},
+            current_progress: 100,
+            name: file.name,
+            variant: "bg-red-400",
+            icon: "fas fa-times",
+            text_class: "text-red-400",
+          });
+          return;
+        }
+
         //path to storage "music-9362a.appspot.com"
         const storageRef = storage.ref();
 

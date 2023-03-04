@@ -23,6 +23,11 @@ export default defineConfig({
             type: "image/png",
           },
         ],
+        description:
+          "Learned how to use Vue's tools and connecting Google's firebase",
+      },
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,png,jpg,}"],
       },
     }),
   ],
