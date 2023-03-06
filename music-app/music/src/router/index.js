@@ -1,12 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 //view components
-import Home from "@/views/Home.vue";
-import About from "@/views/About.vue";
-import Manage from "@/views/Manage.vue";
-import Song from "@/views/Song.vue";
+//commented out bcz the Home below replaced it
+// import Home from "@/views/Home.vue";
+// import About from "@/views/About.vue";
+// import Manage from "@/views/Manage.vue";
+// import Song from "@/views/Song.vue";
 import useUserStore from "@/stores/user";
 
+//imports module dynamically
+//loads as a chunk
+const Home = () => import("@/views/Home.vue");
+const About = () => import("@/views/About.vue");
+const Manage = () => import("@/views/Manage.vue");
+const Song = () => import("@/views/Song.vue");
 //these are called route records
 const routes = [
   {
