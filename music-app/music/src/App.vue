@@ -12,7 +12,7 @@
 
 <script>
 import Heading from "@/components/Header.vue";
-import Auth from "./components/Auth.vue";
+import Auth from "@/components/Auth.vue";
 import AppPlayer from "@/components/Player.vue";
 import { mapWritableState } from "pinia";
 import useUserStore from "@/stores/user";
@@ -25,6 +25,7 @@ export default {
     AppPlayer,
   },
   computed: {
+    //mapping pinia user store to userLoggedIn
     ...mapWritableState(useUserStore, ["userLoggedIn"]),
   },
   created() {

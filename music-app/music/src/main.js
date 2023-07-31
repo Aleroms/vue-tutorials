@@ -5,6 +5,7 @@ import App from "./App.vue";
 import router from "./router";
 import VeeValidatePlugin from "./includes/validation";
 import Icon from "./directives/icon";
+//internationalization
 import i18n from "./includes/i18n";
 import { registerSW } from "virtual:pwa-register";
 import { auth } from "./includes/firebase";
