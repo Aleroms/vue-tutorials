@@ -129,7 +129,7 @@ export default {
       this.updateUnsavedFlag(false);
       this.in_submission = false;
       this.alert_variant = "bg-green-500";
-      this.alert_message = "sucess";
+      this.alert_message = "success";
     },
     async deleteSong() {
       const storageRef = storage.ref();
