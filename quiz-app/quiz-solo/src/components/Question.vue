@@ -4,9 +4,8 @@ export default {
   props: ["questionsAnswered", "questions"],
   methods: {
     evaluateQuestion(choice, is_correct) {
-      if (choice === is_correct) this.$emit("response", true);
-
-      this.$emit("response", false);
+      const res = choice === is_correct;
+      this.$emit("response", res);
     },
   },
   emits: ["response"],
