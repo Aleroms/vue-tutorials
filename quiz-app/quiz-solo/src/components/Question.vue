@@ -3,17 +3,27 @@ export default {
   name: "Question",
   props: ["questionsAnswered", "questions"],
   methods: {
-    evaluateQuestion(is_correct) {
-      this.$emit("response", is_correct);
+    evaluateQuestion(choice, is_correct) {
+      if (choice === is_correct) this.$emit("response", true);
+
+      this.$emit("response", false);
     },
   },
   emits: ["response"],
+  created() {
+    console.log("received message prop:", this.questions);
+  },
 };
 </script>
 <template>
   <div class="questions-ctr">
     <div class="progress">
-      <div class="bar" :style="{width: `${this.questionsAnswered / this.questions.length * 100}%`}"></div>
+      <div
+        class="bar"
+        :style="{
+          width: `${(this.questionsAnswered / this.questions.length) * 100}%`,
+        }"
+      ></div>
       <div class="status">
         {{ questionsAnswered }} out of {{ questions.length }} questions answered
       </div>
@@ -21,20 +31,20 @@ export default {
     <div
       class="single-question"
       v-for="(question, index) in questions"
-      :key="question.q"
+      :key="question.question"
     >
       <div class="question" v-if="index === questionsAnswered">
-        {{ question.q }}
+        {{ question.question }}
       </div>
       <div class="answers">
         <div
           class="answer"
           v-if="index === questionsAnswered"
-          v-for="ans in question.answers"
-          :key="ans.text"
-          @click.prevent="evaluateQuestion(ans.is_correct)"
+          v-for="choice in question.choices"
+          :key="choice"
+          @click.prevent="evaluateQuestion(choice, question.correct_answer)"
         >
-          {{ ans.text }}
+          {{ choice }}
         </div>
       </div>
     </div>

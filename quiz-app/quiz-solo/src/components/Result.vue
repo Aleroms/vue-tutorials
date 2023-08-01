@@ -1,14 +1,17 @@
 <template>
   <div class="result">
     <div class="title">{{ results[resultIndex].title }}</div>
-    <div class="desc">{{ results[resultIndex].desc }}</div>
+    <div class="desc">
+      {{ results[resultIndex].desc }}<br />
+      <p>{{ this.totalCorrect }} correct out of {{ this.length }}</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Result",
-  props: ["results", "totalCorrect"],
+  props: ["results", "totalCorrect", "length"],
   computed: {
     resultIndex() {
       let index = 0;

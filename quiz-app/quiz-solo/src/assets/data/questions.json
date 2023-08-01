@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "question": "Which river is the longest in the world?",
+      "choices": ["Nile", "Amazon", "Mississippi", "Yangtze"],
+      "correct_answer": "Nile"
+    },
+    {
+      "question": "What is the capital city of Australia?",
+      "choices": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+      "correct_answer": "Canberra"
+    },
+    {
+      "question": "Which country is known as the \"Land of the Rising Sun\"?",
+      "choices": ["China", "Japan", "South Korea", "Thailand"],
+      "correct_answer": "Japan"
+    },
+    {
+      "question": "What is the tallest mountain in the world?",
+      "choices": [
+        "Mount Kilimanjaro",
+        "Mount Everest",
+        "Mount McKinley (Denali)",
+        "Mount Aconcagua"
+      ],
+      "correct_answer": "Mount Everest"
+    },
+    {
+      "question": "The Great Barrier Reef, the world's largest coral reef system, is located off the coast of which country?",
+      "choices": ["Brazil", "Indonesia", "Australia", "Egypt"],
+      "correct_answer": "Australia"
+    },
+    {
+      "question": "In which continent can you find the Sahara Desert, the largest hot desert in the world?",
+      "choices": ["Africa", "Asia", "South America", "Australia"],
+      "correct_answer": "Africa"
+    },
+    {
+      "question": "The city of Istanbul is located in which two continents?",
+      "choices": [
+        "Europe and Africa",
+        "Europe and Asia",
+        "Asia and Africa",
+        "Asia and Australia"
+      ],
+      "correct_answer": "Europe and Asia"
+    },
+    {
+      "question": "The Amazon Rainforest, often referred to as the \"Lungs of the Earth,\" is primarily located in which continent?",
+      "choices": ["South America", "Africa", "North America", "Asia"],
+      "correct_answer": "South America"
+    },
+    {
+      "question": "Which of the following countries is not part of the Scandinavian Peninsula?",
+      "choices": ["Norway", "Sweden", "Finland", "Denmark"],
+      "correct_answer": "Finland"
+    },
+    {
+      "question": "Which river runs through the Grand Canyon in the United States?",
+      "choices": [
+        "Colorado River",
+        "Mississippi River",
+        "Hudson River",
+        "Missouri River"
+      ],
+      "correct_answer": "Colorado River"
+    }
+  ]
+}

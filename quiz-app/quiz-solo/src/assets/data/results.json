@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "min": 0,
+      "max": 2,
+      "title": "Try again!",
+      "desc": "Do a little more studying and you may succeed!"
+    },
+    {
+      "min": 3,
+      "max": 7,
+      "title": "Not bad!",
+      "desc": "You're on the right track, keep going!"
+    },
+    {
+      "min": 8,
+      "max": 10,
+      "title": "Excellent!",
+      "desc": "Congratulations! You have an impressive knowledge of world geography!"
+    },
+    {
+      "min": 10,
+      "max": 10,
+      "title": "Perfect Score!",
+      "desc": "Wow! You got all the questions correct. You're a world geography whiz!"
+    }
+  ]
+}
